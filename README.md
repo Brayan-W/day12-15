@@ -20,4 +20,12 @@
     border-radius: 2px;
     }
 
-### 
+### 使部分滚动并隐藏滚动条
+    .overflow {
+      overflow: scroll;
+    }
+
+    .overflow::-webkit-scrollbar {
+      display: none;
+    }   
+   * 注意计算高度要正确
