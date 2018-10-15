@@ -126,7 +126,7 @@ nav .menuNav .progress progress::-webkit-progress-value{
   border-radius: 2px;
 }
 
-.clearFix:after {
+.clearFix::after {
   content: "";
   display: table;
   clear: both;
@@ -179,6 +179,7 @@ nav .menuNav .progress progress::-webkit-progress-value{
 .overflow::-webkit-scrollbar {
   display: none;
 }
+
 .container .chatList .search {
   width: 100%;
   height: 80px;
@@ -256,15 +257,210 @@ nav .menuNav .progress progress::-webkit-progress-value{
 
 .chatList .chatItemsActive .userInfo .userDetail :first-child{
   color: #2399f1;
+  font-weight: bold;
 }
 
 .chatList .chatItemsActive .userInfo .userDetail :first-child::before{
   display: inline-block;
-  content: ' ';
+  content: '';
   width: 0.5em;
   height: 0.5em;
   vertical-align: middle;
   margin-right: 0.5em;
   background-color: #2399f1;
   border-radius: 50%;
+}
+
+.moments{
+  margin-left: 400px;
+  height: calc(100% - 101px);
+  position: relative;
+}
+.momentsHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 80px;
+  padding-left: 40px;
+  border-bottom: 1px solid #e6e9ec;
+}
+
+.momentsHeader>p{
+  color: #616671;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.momentsHeader>p::after{
+  display: inline-block;
+  content: '';
+  width: 0.5em;
+  height: 0.5em;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  background-color: #1BB934;
+  border-radius: 50%;
+  margin: 0px 10px;
+}
+
+.momentsHeader .buttonList{
+  display: flex;
+  align-items: center;
+}
+
+.momentsHeader .buttonList ul{
+  background-color: #F4F6F9;
+  border: 1px solid #e6e9ec;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.momentsHeader .buttonList p{
+  border-left: 1.5px solid #e6e9ec;
+  margin: 0px 10px;
+  padding-left: 10px;
+}
+
+.momentsHeader .buttonList ul li{
+  display: block;
+  float: left;
+  padding: 10px 15px;
+}
+
+.momentsHeader .buttonList ul li.addBorderRight{
+  border-right:1px solid #e6e9ec;
+}
+.momentsList {
+  height: calc(100% - 180px);
+  margin-bottom: 100px;
+}
+.momentsList .momentsItem{
+  margin: 30px 50px 0px 0px;
+}
+
+.momentsList .momentsItem>img{
+  width: 46px;
+  float: left;
+  margin: 0px 20px;
+}
+.momentsList .momentsItem .momentDetail {
+  margin-left: 90px;
+}
+
+.momentsList .momentsItem .momentDetail p span.whoSends{
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #616671;
+}
+
+.momentsList .momentsItem .momentDetail p span.postTime{
+  padding-left: 5px;
+  color: #B7C0CD;
+}
+
+.momentsList .momentsItem .momentContent{
+  color: #A3A5AC;
+  padding-top: 10px;
+}
+
+/* .momentsList .splitline{
+  width: 100%;
+  height: 0px;
+  position: relative;
+  text-align: center;
+}
+.momentsList .splitline::before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #A3A5AC;
+}
+
+.momentsList .splitline span{
+  background-color: white;
+  color: #A3A5AC; 
+  z-index: 1;
+} */
+
+.momentsList .splitline{
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e6e9ec;
+  text-align: center;
+}
+
+.momentsList .blueline{
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #269BF3;
+  text-align: center;
+}
+
+.momentsList .splitline span{
+  position: relative;
+  top: 10px;
+  padding: 0px 10px;
+  background-color: white;
+  color: #A3A5AC; 
+}
+
+.momentsList .blueline span{
+  position: relative;
+  top: 10px;
+  padding: 0px 10px;
+  background-color: white;
+  color: #269BF3; 
+}
+.momentsItem .ablum .photo{
+  position: relative;
+  float: left;
+  margin: 20px 20px 20px 0px;
+}
+.momentsItem .ablum .photoMask{
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #222C3C;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.momentsItem .ablum .photoMask>img{
+  margin-top: 25px;
+}
+.momentsItem .ablum .photo:hover .photoMask{
+  display: block;
+}
+
+.momentPost {
+  width: 100%;
+  padding: 20px 50px 20px 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+.momentPost>img{
+  float: left;
+  padding: 18px;
+  height: 50px;
+  background-color: #e6e9ec;
+  border: 1px solid #B7C0CD;
+  border-right: none;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.momentPost input{
+  height: 50px;
+  width: calc(100% - 52px);
+  padding-left: 20px;
+  border: 1px solid #B7C0CD;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
 }
