@@ -29,6 +29,7 @@
       display: none;
     }   
    * 注意计算高度要正确
+ - 滚动部分若下方有` position:absolute; `的块；可以将滚动部分的添加适当大小的 `margin-bottom` 以免遮挡内容
 
 ### 图片添加蒙版Mask
 - 要点:先把蒙版设置为 ` display:none;` 然后设置`:hover` 时` display：block;`
