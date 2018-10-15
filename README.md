@@ -29,3 +29,7 @@
       display: none;
     }   
    * 注意计算高度要正确
+
+### 图片添加蒙版Mask
+- 要点:先把蒙版设置为 ` display:none;` 然后设置`:hover` 时` display：block;`
+- 注意：高度和宽度要设置为100%
